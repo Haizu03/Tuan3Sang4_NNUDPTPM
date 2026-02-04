@@ -1,0 +1,23 @@
+.sortable {
+  cursor: pointer;
+}
+
+tbody tr {
+  position: relative;
+}
+
+tbody tr:hover::after {
+  content: attr(data-desc);
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: rgba(0,0,0,0.85);
+  color: white;
+  padding: 10px;
+  width: 100%;
+  font-size: 13px;
+  z-index: 10;
+}
+tbody tr::after {
+  display: none;
+}
